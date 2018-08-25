@@ -8,94 +8,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid">
-        <h2>Main Execom</h2>
+    <div class="container">
         <div class="row">
-            {{#each members.main as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Main Execom</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.main as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Coding Cell</h2>
         <div class="row">
-            {{#each members.coding as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Coding Cell</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.coding as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Women Cell</h2>
         <div class="row">
-            {{#each members.women as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Women Cell</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.women as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Web Team</h2>
         <div class="row">
-            {{#each members.web as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Web Team</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.web as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-         <h2>Technical Coordinator</h2>
         <div class="row">
-            {{#each members.tech as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card w-50">
+                <div class=" card-header">
+                    <h4 class="card-title">Technical Team</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.tech as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card w-50">
+                <div class=" card-header">
+                    <h4 class="card-title">Project Team</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.project as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Project Coordinator</h2>
         <div class="row">
-            {{#each members.project as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Membership Team</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.membership as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Membership Coordinator</h2>
         <div class="row">
-            {{#each members.membership as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
-        </div>
-        <h2>Department Representatives</h2>
-        <div class="row">
-            {{#each members.deprep as |member|}}
-                <div class="col-md-2">
-                    <img src="images/{{member.image}}" class="img-fluid" alt="{{member.name}}">
-                    <h4>{{member.name}}</h3>
-                    <h5>{{member.designation}}</h6>
-                    <blockquote class="blockquote font-italic">"{{member.quote}}"</blockquote>     
-                </div>  
-            {{/each}}
+            <div class="card">
+                <div class=" card-header">
+                    <h4 class="card-title">Department Representatives</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-deck">
+                        {{#each members.deprep as |member|}}
+                            <div class="card">
+                                <img src="images/{{member.image}}" class="card-img-top" alt="{{member.name}}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{member.name}}</h4>
+                                    <h5 class="card-text">{{member.designation}}</h5>
+                                    <blockquote class=" card-text blockquote font-italic">"{{member.quote}}"</blockquote>     
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
