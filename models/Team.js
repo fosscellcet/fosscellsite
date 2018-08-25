@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.STRING(),
             allowNull : false
         },
+        subTeam : {
+            type : DataTypes.STRING(),
+            allowNull : false
+        },
         quote : {
             type : DataTypes.TEXT()
         },

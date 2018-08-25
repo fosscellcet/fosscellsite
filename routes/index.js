@@ -6,4 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'FOSS Site' });
 });
 
+router.use('/team',require('./team'))
+
 module.exports = router;
