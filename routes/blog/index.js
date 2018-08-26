@@ -6,10 +6,12 @@ router.get('/', (req, res, next) => {
     controller.getLatestPosts(1)
         .then((posts) => {
             console.log("THe posts are" + posts)
-            res.render('blog', { posts })
+            res.json(
+                { posts }
+            )
         }).catch((err) => {
             console.log(err)
-            res.render('error', { 'message': 'An error has occurred', error: err })
+            res.json({ 'message': 'An error has occurred', 'error': err })
         })
 })
 
