@@ -1,29 +1,38 @@
 module.exports = (sequelize, DataTypes) => {
-    const Team = sequelize.define('team', {
+    const blog = sequelize.define('blog', {
         id: {
             type: DataTypes.INTEGER(),
             autoIncrement: true,
             primaryKey: true
         },
-        name: {
+        author: {
             type: DataTypes.STRING(),
             allowNull: false
         },
-        designation: {
+        title: {
             type: DataTypes.STRING(),
             allowNull: false
         },
-        subTeam: {
+        content: {
+            type: DataTypes.TEXT(),
+            allowNull: false
+        },
+        coverImage: {
             type: DataTypes.STRING(),
             allowNull: false
         },
-        quote: {
-            type: DataTypes.TEXT()
+        likes: {
+            type: DataTypes.INTEGER(),
+            default: 0
         },
-        image: {
-            type: DataTypes.STRING(),
+        postDate: {
+            type: DataTypes.DATE(),
+            allowNull: false
+        },
+        postTime: {
+            type: DataTypes.TIME(),
             allowNull: false
         }
-    });
-    return Team;
+    })
+    return blog
 }

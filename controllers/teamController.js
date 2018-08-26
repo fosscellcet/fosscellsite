@@ -4,73 +4,73 @@ var Promise = require('bluebird');
 
 teamController = {};
 
-teamController.getAllTeamMembersBySubTeam = () => new Promise((resolve,reject) => {
+teamController.getAllTeamMembersBySubTeam = () => new Promise((resolve, reject) => {
     model.findAll({
-        where : { subTeam : 'Main' }
-    })
-    .then((main) => {
-        model.findAll({
-            where : { subTeam : 'Coding' }
+            where: { subTeam: 'Main' }
         })
-        .then((coding) => {
+        .then((main) => {
             model.findAll({
-                where : { subTeam : 'Women' }
-            })
-            .then((women) => {
-                model.findAll({
-                    where : { subTeam : 'DepRep' }
+                    where: { subTeam: 'Coding' }
                 })
-                .then((deprep) => {
+                .then((coding) => {
                     model.findAll({
-                        where : { subTeam : 'Web' }
-                    })
-                    .then((web) => {
-                        model.findAll({
-                            where : { subTeam : 'Tech' }
+                            where: { subTeam: 'Women' }
                         })
-                        .then((tech) => {
+                        .then((women) => {
                             model.findAll({
-                                where : { subTeam : 'Project' }
-                            })
-                            .then((project) => {
-                                model.findAll({
-                                    where : { subTeam : 'Membership' }
+                                    where: { subTeam: 'DepRep' }
                                 })
-                                .then((membership) => {
-                                    members = { main, coding, women, deprep, web, tech, project, membership};
-                                    resolve(members);
+                                .then((deprep) => {
+                                    model.findAll({
+                                            where: { subTeam: 'Web' }
+                                        })
+                                        .then((web) => {
+                                            model.findAll({
+                                                    where: { subTeam: 'Tech' }
+                                                })
+                                                .then((tech) => {
+                                                    model.findAll({
+                                                            where: { subTeam: 'Project' }
+                                                        })
+                                                        .then((project) => {
+                                                            model.findAll({
+                                                                    where: { subTeam: 'Membership' }
+                                                                })
+                                                                .then((membership) => {
+                                                                    members = { main, coding, women, deprep, web, tech, project, membership };
+                                                                    resolve(members);
+                                                                })
+                                                                .catch((err) => {
+                                                                    reject(err);
+                                                                });
+                                                        })
+                                                        .catch((err) => {
+                                                            reject(err);
+                                                        });
+                                                })
+                                                .catch((err) => {
+                                                    reject(err);
+                                                });
+                                        })
+                                        .catch((err) => {
+                                            reject(err);
+                                        });
                                 })
                                 .catch((err) => {
                                     reject(err);
                                 });
-                            })
-                            .catch((err) => {
-                                reject(err);
-                            });
                         })
                         .catch((err) => {
                             reject(err);
                         });
-                    })
-                    .catch((err) => {
-                        reject(err);
-                    });
                 })
                 .catch((err) => {
                     reject(err);
                 });
-            })
-            .catch((err) => {
-                reject(err);
-            });
         })
         .catch((err) => {
             reject(err);
         });
-    })
-    .catch((err) => {
-        reject(err);
-    });
 });
 
 
