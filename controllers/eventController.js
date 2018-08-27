@@ -15,15 +15,45 @@ eventController.getLatestEvents = (page) => new Promise((resolve, reject) => {
     })
 })
 
-eventController.getEventByDate = (postDate) => new Promise((resolve,reject) => {
+eventController.getEventByDate = (postDate) => new Promise((resolve, reject) => {
     model.findAll({
-        where:{
-            date : postDate
+        where: {
+            date: postDate
         }
     }).then((post) => {
         resolve(post);
     }).catch((err) => {
         reject(err);
     })
+})
+eventController.createevent = (event) => new Promise((resolve, reject) => {
+    model.create(event)
+        .then((result) => {
+            resolve(result)
+        }).catch((err) => {
+            reject(err)
+        })
+})
+eventController.updateEvent = (event) => new Promise((resolve, reject) => {
+    model.update(event, {
+        where: {
+            id: event.id
+        }
+    }).then((updated) => {
+        resolve(updated)
+    }).catch((err) => {
+        reject(err)
+    });
+})
+eventController.deleteEvent = (event) => new Promise((resolve, reject) => {
+    model.destroy({
+        where: {
+            id: event.id
+        }
+    }).then((event) => {
+        resolve(event)
+    }).catch((err) => {
+        reject(err)
+    });
 })
 module.exports = eventController

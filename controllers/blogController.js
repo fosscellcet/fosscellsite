@@ -15,15 +15,34 @@ blogController.getLatestPosts = (page) => new Promise((resolve, reject) => {
     })
 })
 
-blogController.getPostByID = (postid) => new Promise((resolve,reject) => {
+blogController.getPostByID = (postid) => new Promise((resolve, reject) => {
     model.findAll({
-        where:{
-            id : postid
+        where: {
+            id: postid
         }
     }).then((post) => {
         resolve(post);
     }).catch((err) => {
         reject(err);
     })
+})
+blogController.createPost = (post) => new Promise((resolve, reject) => {
+    model.create(post).then((result) => {
+        resolve(result)
+    }).catch((err) => {
+        reject(err)
+    });
+})
+blogController.updatePost = (post) => new Promise((resolve, reject) => {
+    console.log(post)
+    model.update(post, {
+        where: {
+            id: post.id
+        }
+    }).then((post) => {
+        resolve(post)
+    }).catch((err) => {
+        reject(err)
+    });
 })
 module.exports = blogController

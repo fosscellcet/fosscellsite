@@ -8,4 +8,5 @@ router.get('/', function(req, res, next) {
 router.use('/auth',require('./auth'))
 router.use('/team', require('./team'))
 router.use('/blog', require('./blog'))
+router.use('/event',require('./event'))
 module.exports = router;
