@@ -1,0 +1,11 @@
+{
+  "contact": {
+    "address": "somenewfakeaddress",
+    "phone": 1234567890,
+    "email": "somenewfakeemail@somefakedomain.com"
+  },
+  "about": {
+    "title": "About FOSS Cell CET",
+    "content": "Some fake new and exciting content about foss cell cet"
+  }
+}

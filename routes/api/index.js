@@ -9,4 +9,6 @@ router.use('/auth',require('./auth'))
 router.use('/team', require('./team'))
 router.use('/blog', require('./blog'))
 router.use('/event',require('./event'))
+router.use('/contact',require('./contact'))
+router.use('/about', require('./about'))
 module.exports = router;
