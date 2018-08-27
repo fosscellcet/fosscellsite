@@ -29,8 +29,8 @@ router.post('/', (req, res, next) => {
         });
 
 })
-router.put('/', (req, res, next) => {
-    controller.updateEvent(req.body.event)
+router.put('/:id', (req, res, next) => {
+    controller.updateEvent(req.params.id, req.body.event)
         .then((event) => {
             res.json({ event })
         }).catch((err) => {

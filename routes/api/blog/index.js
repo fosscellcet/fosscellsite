@@ -28,8 +28,8 @@ router.post('/', (req, res, next) => {
             res.json({ err })
         });
 })
-router.put('/', (req, res, next) => {
-    controller.updatePost(req.body.post)
+router.put('/:id', (req, res, next) => {
+    controller.updatePost(req.params.id, req.body.post)
         .then((result) => {
             res.json({ result })
         }).catch((err) => {

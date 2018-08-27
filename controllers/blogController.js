@@ -33,11 +33,11 @@ blogController.createPost = (post) => new Promise((resolve, reject) => {
         reject(err)
     });
 })
-blogController.updatePost = (post) => new Promise((resolve, reject) => {
+blogController.updatePost = (id, post) => new Promise((resolve, reject) => {
     console.log(post)
     model.update(post, {
         where: {
-            id: post.id
+            id: id
         }
     }).then((post) => {
         resolve(post)

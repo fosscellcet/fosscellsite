@@ -34,10 +34,10 @@ eventController.createevent = (event) => new Promise((resolve, reject) => {
             reject(err)
         })
 })
-eventController.updateEvent = (event) => new Promise((resolve, reject) => {
+eventController.updateEvent = (id, event) => new Promise((resolve, reject) => {
     model.update(event, {
         where: {
-            id: event.id
+            id: id
         }
     }).then((updated) => {
         resolve(updated)
