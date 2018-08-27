@@ -1,7 +1,8 @@
 var express = require('express')
 var router = express.Router()
-var filePath = '/views/pages/blog/index.html'
-var resolvedPath = '/home/bilal/program/FOSS/fosscellsite' + filePath
+var path = require('path')
+var filePath = '../../../views/pages/blog/index.html'
+var resolvedPath = path.join(__dirname, filePath) 
 router.get('/', (req, res) => {
     res.sendFile(resolvedPath)
 })
