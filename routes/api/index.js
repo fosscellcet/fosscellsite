@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'FOSS API' });
 });
-
+router.use('/auth',require('./auth'))
 router.use('/team', require('./team'))
 router.use('/blog', require('./blog'))
 module.exports = router;

@@ -1,9 +1,9 @@
-var model = require('../models').blog
 var Promise = require('bluebird')
+var model = require('../models').event
 
-blogController = {}
+var eventController = {}
 
-blogController.getLatestPosts = (page) => new Promise((resolve, reject) => {
+eventController.getLatestEvents = (page) => new Promise((resolve, reject) => {
     model.findAll({
         offset: (page - 1) * 10,
         limit: 10,
@@ -15,10 +15,10 @@ blogController.getLatestPosts = (page) => new Promise((resolve, reject) => {
     })
 })
 
-blogController.getPostByID = (postid) => new Promise((resolve,reject) => {
+eventController.getEventByDate = (postDate) => new Promise((resolve,reject) => {
     model.findAll({
         where:{
-            id : postid
+            date : postDate
         }
     }).then((post) => {
         resolve(post);
@@ -26,4 +26,4 @@ blogController.getPostByID = (postid) => new Promise((resolve,reject) => {
         reject(err);
     })
 })
-module.exports = blogController
+module.exports = eventController
