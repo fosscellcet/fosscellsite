@@ -9,6 +9,12 @@ const JWTStrategy = passportJWT.Strategy;
 const controller = require('../controllers/userController');
 const secret = require('../config/main').secret;
 
+var cookieExtractor = function(req) {
+    var token = null;
+    if (req && req.cookies) token = req.cookies['jwt'];
+    return token;
+  };
+
 passport.use( new LocalStrategy({
     usernameField : 'username',
     passwordField : 'password'
@@ -28,7 +34,8 @@ passport.use( new LocalStrategy({
 ))
 
 passport.use(new JWTStrategy({
-        jwtFromRequest : ExtractJWT.fromAuthHeaderAsBearerToken(),
+        //jwtFromRequest : ExtractJWT.fromAuthHeaderAsBearerToken(),
+        jwtFromRequest : cookieExtractor,
         secretOrKey : secret
     },
     function (jwtPayload, cb){

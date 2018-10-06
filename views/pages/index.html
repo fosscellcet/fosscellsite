@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fossCellCet</title>
+	<style >
+		html,body {
+  			height: 100%;
+		}
+    .nav{
+
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Josefin Slab', serif;
+
+    /*font-family: 'Exo', sans-serif;*/
+
+    /*font-family: 'Quicksand', sans-serif;*/
+
+    /*font-family: 'Dosis', sans-serif;*/
+
+    
+
+    /*font-family: 'IBM Plex Mono', monospace;*/
+
+    
+
+
+    /*font-family: 'VT323', monospace;*/
+
+    /*font-family: 'Cutive Mono', monospace;*/
+
+    /*font-family: 'Geo', sans-serif;*/
+
+    font-weight: 500;
+    font-size: 1.8rem;
+
+
+    }
+    .nav-item{
+      padding-right: 3vw;
+
+    }
+    a:hover{
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      letter-spacing: .06rem;     
+    }
+    p{
+      font-size:1.2rem;
+    }
+		.first{
+			transition: background-position 1s ease ;
+			background-image: url(/static/images/fossfinal.png);
+			
+			background-size: contain;
+			background-color: #282828;
+			background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		background-position: 0% 50%; 
+
+		}
+		.second{
+			
+			transition: opacity 1s ease .5s;
+			background-image: url(/static/images/fossfinal.png);
+			background-size: contain;
+			background-color: #282828;
+			background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		background-position: center; 
+		}
+
+		.hidden{
+			display: none;
+		}
+
+    .fadeIn{
+      animation-name: fadeIn;
+      animation-duration: 3s;
+    }
+    .about{
+      position: fixed;
+    }
+
+    .contact{
+      position:fixed;
+      display: none;
+    }
+
+    @keyframes fadeIn{
+      from{ opacity : 0;}
+      to {opacity: 1;}
+    }
+		 
+
+
+	</style>
+ <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Dosis|Exo|Geo|IBM+Plex+Mono|Inconsolata|Josefin+Slab|PT+Mono|Quantico|Quicksand|Raleway|VT323" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<script src="/static/javascript/scroller.min.js"></script>
+
+
+</head>
+<body class="second ">
+	<div class="hidden">
+    <nav class="navbar navbar-expand-md navbar-dark fadeIn fixed-top">
+      <a class="navbar-brand" href="#"><img src="/static/images/fosscellnavicon.ico" style="height: 50px;width: auto;"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="nav navbar-nav ml-auto ">
+          <li class="nav-item active">
+            <a class="nav-link aboutLink" href="#">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link contactLink" href="#">Contact</a>
+          </li>          
+        </ul>        
+      </div>
+    </nav>
+  </div>
+
+  <div>
+    	<!-- Rest of the body that pops up -->
+  <div class="hidden">
+    <div class="row container-fluid about">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 fadeIn" style="color: white;text-align: center;padding-top: 18vh;padding-bottom: 28vh; padding-left: 7vw;padding-right: 7vw;font-family: 'Geo', sans-serif;">
+        <h1>-About-</h1>
+        <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+      </div>	
+    </div>
+    <div class="row container-fluid contact">
+          <div class="col-md-6"></div>
+          <div class="col-md-6 fadeIn" style=" color: white;text-align: center;padding-top: 16vh;padding-bottom: 25vh; padding-left: 7vw;padding-right: 7vw">
+            <h1>-Contact-</h1>
+            <ul class="contact">
+              <li style="text-align: left;">
+                <p><i class="fa fa-map-marker fa-3x"></i></p>
+                <p><strong>Address:</strong></br>College Of Engineering Trivandrum</p>
+              </li>
+              <li style="text-align: left;">
+                <p><i class="fa fa-phone fa-3x"></i></p>
+                <p><strong>Phone:</strong></br>+8832424398234</p>
+              </li>
+              <li style="text-align: left;">
+                <p><i class="fa fa-envelope fa-3x"></i></p>
+                <p><strong>E-mail:</strong></br>fosscellcet@cet.ac.in</p>
+              </li>
+            </ul>
+          </div>  
+    </div>
+  </div>
+
+</div>
+    	
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
+  <script type="text/javascript" src="/static/javascript/index.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

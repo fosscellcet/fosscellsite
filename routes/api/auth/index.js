@@ -44,6 +44,7 @@ router.post('/login', function (req, res, next){
 
             const token = jwt.sign({ user }, secret)
 
+            res.cookie('jwt', token)
             return res.json({user, token})
         })
     })
